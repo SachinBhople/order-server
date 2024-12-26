@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser())
 app.use(cors(
-    { origin: true, credentials: true }
+    { origin: "*", credentials: true }
 ))
 // Routes
 app.use("/api/order", orderrouter);
