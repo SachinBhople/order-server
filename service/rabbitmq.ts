@@ -15,7 +15,7 @@ let connection: Connection | null = null;
 // Connect to RabbitMQ using async/await
 const connectToRabbitMQ = async (): Promise<void> => {
     try {
-        const conn = await connect(RABBITMQ_URL);
+        const conn = await connect("amqps://jjkmkhsy:T6_uttsuCiPb0PSNIu2lVhPpcs48PNzS@puffin.rmq2.cloudamqp.com/jjkmkhsy");
         connection = conn;
         channel = await conn.createChannel();
         // channel.consume("sachin", (msg) => {
