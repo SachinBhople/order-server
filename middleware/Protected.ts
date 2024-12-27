@@ -11,9 +11,11 @@ export const userProtected = async (req: CustomRequest, res: Response, next: Nex
 
     // if (!req.cookies) {
     //     return res.status(400).json({ message: "cookies not founddd" })
-    // }
-    const { user } = req.cookies;
-    console.log(user);
+    //
+
+    const user: any = req.headers.authorization
+    // const { user } = req.cookies;
+    // console.log("from order", user);
 
 
     if (!user) {
